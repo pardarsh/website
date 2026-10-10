@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pardarsh</title>
+  <meta name="description"
+    content="Pardarsh: open infrastructure for public records that are traceable, attributable and machine-readable. Home of pardarsh-core and Loklekha.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="favicon.png">
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="brand" href="#top">
+        <img class="mark" src="favicon.png" alt="" width="28" height="28">
+        Pardarsh
+      </a>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#writing">Writing</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- Hero -->
+    <section class="hero wrap">
+      <p class="eyebrow">पारदर्श &nbsp;·&nbsp; transparent</p>
+      <h1>Public records that can be <em>traced</em>, <em>trusted</em> and <em>read by machines</em>.</h1>
+      <p class="lede">
+        Government already produces laws, budgets, tenders, complaints and decisions.
+        What it lacks is a common way to connect them. Pardarsh is open infrastructure
+        for keeping public records with stable identities, a full history of who changed
+        what, and links that show how one decision leads to the next.
+      </p>
+      <div class="cta">
+        <a class="btn primary" href="#projects">See the projects</a>
+        <a class="btn" href="#writing">Read the thesis</a>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="wrap section">
+      <h2 class="section-title">The idea</h2>
+      <div class="principles">
+        <div class="principle">
+          <span class="num">01</span>
+          <h3>Stable identity</h3>
+          <p>Every record gets an ID that never changes, so a complaint, a project and a payment can point at each other
+            for years.</p>
+        </div>
+        <div class="principle">
+          <span class="num">02</span>
+          <h3>Attributable history</h3>
+          <p>Nothing is silently overwritten. Each change is an event with an author and a time, so the record shows how
+            it got here.</p>
+        </div>
+        <div class="principle">
+          <span class="num">03</span>
+          <h3>Provenance</h3>
+          <p>Claims carry their sources. You can see whether something came from a citizen, an official notice or a
+            court order.</p>
+        </div>
+        <div class="principle">
+          <span class="num">04</span>
+          <h3>Typed relationships</h3>
+          <p>Records connect through named links, such as <i>addresses</i>, <i>funds</i> or <i>supersedes</i>, forming a
+            graph of public decisions.</p>
+        </div>
+        <div class="principle">
+          <span class="num">05</span>
+          <h3>Verifiable export</h3>
+          <p>Any record can be exported with its full history as a bundle that anyone can check independently.</p>
+        </div>
+        <div class="principle">
+          <span class="num">06</span>
+          <h3>Not one big database</h3>
+          <p>Institutions and communities keep their own records and share common concepts, so the system federates
+            rather than centralises.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="wrap section">
+      <h2 class="section-title">Projects</h2>
+      <div class="projects">
+        <article class="project">
+          <div class="project-head">
+            <span class="tag">Infrastructure · Rust</span>
+            <h3>pardarsh-core</h3>
+          </div>
+          <p>
+            Application-agnostic building blocks for public records: the record model,
+            identifiers, event history, provenance, typed graph relationships, validation,
+            storage interfaces and verifiable export bundles. It knows nothing about any
+            particular app, so anyone can build on it.
+          </p>
+          <a class="link" href="https://github.com/pardarsh/pardarsh-core" target="_blank"
+            rel="noopener">github.com/pardarsh/pardarsh-core <span aria-hidden="true">→</span></a>
+        </article>
+
+        <article class="project">
+          <div class="project-head">
+            <span class="tag">Application · Civic ledger</span>
+            <h3>Loklekha <span class="gloss">लोकलेखा</span></h3>
+          </div>
+          <p>
+            The first app built on pardarsh-core: a public ledger of civic issues.
+            Anyone can raise an issue, attach evidence, name the responsible body, and
+            follow it through acknowledgement, decisions, actions and outcomes, with
+            every step on the record.
+          </p>
+          <span class="link muted">In development</span>
+        </article>
+      </div>
+      <p class="note">Loklekha depends on pardarsh-core; pardarsh-core never depends on Loklekha. That one-way line
+        keeps the foundation reusable for other public-record apps.</p>
+    </section>
+
+    <!-- Writing -->
+    <section id="writing" class="wrap section">
+      <h2 class="section-title">Writing &amp; docs</h2>
+      <p class="section-intro">Essays, thesis pieces and documentation behind the project.</p>
+
+      <!--
+        To add an entry, copy one <li class="entry"> block below and edit it.
+        data-kind can be: essay, thesis, doc, talk (it only changes the label colour).
+      -->
+      <ul class="entries">
+
+        <li class="entry" data-kind="thesis">
+          <a href="https://lakshaynama.substack.com/p/government-as-a-public-repository" target="_blank" rel="noopener">
+            <div class="entry-meta"><span class="kind">Thesis</span><span>Substack</span></div>
+            <h3>Government as a Public Repository</h3>
+            <p>What if the state kept its decisions the way software teams keep code: versioned, attributable and open
+              for anyone to inspect?</p>
+            <span class="read">Read <span aria-hidden="true">→</span></span>
+          </a>
+        </li>
+
+        <li class="entry" data-kind="thesis">
+          <a href="https://lakshaynama.substack.com/p/transparent-machine-readable-government-model" target="_blank"
+            rel="noopener">
+            <div class="entry-meta"><span class="kind">Thesis</span><span>Substack</span></div>
+            <h3>A Transparent, Machine-Readable Government Model</h3>
+            <p>A model for publishing public decisions as connected, structured data rather than scattered documents, so
+              they can be traced and computed on.</p>
+            <span class="read">Read <span aria-hidden="true">→</span></span>
+          </a>
+        </li>
+
+        <li class="entry" data-kind="doc">
+          <a href="https://github.com/pardarsh/pardarsh-core" target="_blank" rel="noopener">
+            <div class="entry-meta"><span class="kind">Docs</span><span>GitHub</span></div>
+            <h3>pardarsh-core on GitHub</h3>
+            <p>Source, entity guide and design notes for the core infrastructure.</p>
+            <span class="read">Open <span aria-hidden="true">→</span></span>
+          </a>
+        </li>
+
+      </ul>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>Pardarsh &nbsp;·&nbsp; open infrastructure for public records</p>
+      <p class="muted">Built by Lakshay Chauhan &nbsp;·&nbsp; <a href="https://lakshaynama.substack.com" target="_blank"
+          rel="noopener">Substack</a> &nbsp;·&nbsp; <a href="https://github.com/pardarsh" target="_blank"
+          rel="noopener">GitHub</a></p>
+    </div>
+  </footer>
+
+</body>
+
+</html>
