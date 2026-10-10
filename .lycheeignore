@@ -1,0 +1,8 @@
+# Links lychee can't check reliably from CI. They work in a browser.
+
+# Substack sits behind bot protection and answers CI with 403.
+^https://lakshaynama\.substack\.com
+
+# Google Fonts preconnect hosts: the bare domains return 404 by design.
+^https://fonts\.googleapis\.com/?$
+^https://fonts\.gstatic\.com/?$
